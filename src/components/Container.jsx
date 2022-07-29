@@ -25,6 +25,7 @@ function Container(){
   }
   return (
     <div id="container" className="py-5 bg-dark">
+        <h1>calculator</h1>
         <div id="calc" className="row py-5 border border-3 border-primary ps-4 mt-3 mb-3 ">
           <input id="display" readOnly className="form-control col-12 mb-4" placeholder="0" value={display}/>
           <button onClick={handleClick} className="btn btn-primary col-2 p-2 m-2" value={"7"}>7</button>
