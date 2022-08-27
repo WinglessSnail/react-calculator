@@ -14,18 +14,18 @@ function Container() {
     "8",
     "9",
     "0",
-    "=",
     "/",
     "*",
     "-",
     "Enter",
-    "Backspace"
+    "Backspace",
   ]);
 
   const handleKeyup = (e) => {
     let find = keys.some((keys) => {
       return keys === e.key;
     });
+    console.log(e);
     if (find) {
       if (e.key === "Enter") {
         try {
@@ -33,11 +33,9 @@ function Container() {
         } catch (error) {
           setDisplay("Error");
         }
-      }
-      else if (e.key === "Backspace"){
-        setDisplay(display.slice(0,display.length-1 ))
-      }
-       else {
+      } else if (e.key === "Backspace") {
+        setDisplay(display.slice(0, display.length - 1));
+      } else {
         setDisplay(display + e.key);
       }
     }
